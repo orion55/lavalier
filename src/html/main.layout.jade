@@ -4,12 +4,15 @@ doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
-        meta(name="description" content='Real-Estate')
+        meta(name="description" content='Lavelier')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         link(rel="icon" type="image/png" href="img/favicon.png")
         title
             block title
-        //build:css css/jquery.bxslider.min.css
+        link(href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet")
+        //build:css css/vendor.min.css
+        +vendor('style', 'normalize-css/normalize.css')
+        +vendor('style', 'font-awesome/css/font-awesome.css')
         +vendor('style', 'bxslider/jquery.bxslider.css')
         //endbuild
         link(rel="stylesheet" href="css/styles.min.css")

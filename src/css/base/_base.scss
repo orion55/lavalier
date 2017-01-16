@@ -1,15 +1,17 @@
-$green: #0eaaa6;
+$blue: #608eb5;
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'OpenSansRegular', 'Arial', sans-serif;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
   color: black;
-  font-size: 13px;
+  font-size: 14px;
   background-color: white;
+  //font-family: 'Hind', sans-serif;
 }
 
 ul {
@@ -22,4 +24,9 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }

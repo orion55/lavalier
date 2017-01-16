@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "jquery": "^1.0.0",
-    "bxslider": "*"
+    "bxslider": "*",
+    "normalize-css": "^5.0.0",
+    "font-awesome": "^4.7.0"
   }
 }
