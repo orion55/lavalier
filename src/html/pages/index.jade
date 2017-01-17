@@ -260,24 +260,11 @@ block content
 
     .brends
         ul#slider-brends.brends__list
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand01.png" alt="brand01")
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand02.png" alt="brand02")
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand03.png" alt="brand03")
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand04.png" alt="brand04")
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand05.png" alt="brand05")
-            li.brends__item
-                .brends__picture
-                    img.brends__image(src="img/brands/brand06.png" alt="brand06")
+            - var brends = ["brand01", "brand02", "brand03", "brand04", "brand05", "brand06"];
+            each val in brends
+                li.brends__item
+                    .brends__picture
+                        img.brends__image(src="img/brands/#{val}.png" alt="#{val}")
 
     .modules
         .modules__wrap
@@ -296,17 +283,17 @@ block content
                 .modules__accordion.accordion
                     h4.accordion__title We always use responsive design
                     .accordion__photo
-                        img.accordion__photo(src="#" alt="Photo01")
+                        img.accordion__image(src="#" alt="Photo01")
                     p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     h4.accordion__title We have super UI design
                     .accordion__photo
-                        img.accordion__photo(src="#" alt="Photo02")
+                        img.accordion__image(src="#" alt="Photo02")
                     p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     h4.accordion__title Ux optimize
                     .accordion__photo
-                        img.accordion__photo(src="#" alt="Photo03")
+                        img.accordion__image(src="#" alt="Photo03")
                     p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     h4.accordion__title You will love this theme
                     .accordion__photo
-                        img.accordion__photo(src="#" alt="Photo04")
+                        img.accordion__image(src="#" alt="Photo04")
                     p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
