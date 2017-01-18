@@ -45,20 +45,10 @@ html(lang='en')
 
             nav.nav
                 ul.nav__list
-                    li.nav__item
-                        a.nav__link(href="#") New
-                    li.nav__item
-                        a.nav__link(href="#") Woman
-                    li.nav__item
-                        a.nav__link(href="#") Man
-                    li.nav__item
-                        a.nav__link(href="#") Kids
-                    li.nav__item
-                        a.nav__link(href="#") Lookbook
-                    li.nav__item
-                        a.nav__link(href="#") Sale
-                    li.nav__item
-                        a.nav__link(href="#") About us
+                    - var links = ["New", "Woman", "Kids", "Lookbook", "Sale", "About us"];
+                        each val in links
+                            li.nav__item
+                                a.nav__link(href="#")= val
                     li.nav__item
                         a.nav__link(href="#")
                             i.fa.fa-search(aria-hidden="true") search

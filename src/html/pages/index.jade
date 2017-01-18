@@ -6,62 +6,32 @@ block title
 block content
     .slider
         ul#slider-main.slider__list
-            li.slider__item
-                img.slider__image(src="img/slider01.jpg" alt="background01")
-                .slider__inner.promo
-                    h2.promo__title Best theme for ecommerce
-                    img.promo__pic(src="img/cavalier-slider.png")
-                    .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
-                    a.btn(href="#")
-                    a.btn.btn--invert(href="#")
-            li.slider__item
-                img.slider__image(src="img/slider02.jpg" alt="background02")
-                .slider__inner.promo
-                    h2.promo__title Best theme for ecommerce
-                    img.promo__pic(src="img/cavalier-slider.png")
-                    .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
-                    a.btn(href="#")
-                    a.btn.btn--invert(href="#")
-            li.slider__item
-                img.slider__image(src="img/slider03.jpg" alt="background03")
-                .slider__inner.promo
-                    h2.promo__title Best theme for ecommerce
-                    img.promo__pic(src="img/cavalier-slider.png")
-                    .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
-                    a.btn(href="#")
-                    a.btn.btn--invert(href="#")
+            - var n = 1;
+            while n < 4
+                li.slider__item
+                    //img.slider__image(src="img/slider0#{n}.jpg" alt="background0#{n}")
+                    img.slider__image(src="#" alt="background0#{n}")
+                    .slider__inner.promo
+                        h2.promo__title Best theme for ecommerce
+                        img.promo__pic(src="img/cavalier-slider.png")
+                        .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
+                        a.btn(href="#")
+                        a.btn.btn--invert(href="#")
+                - n++;
 
     .features
         h2.features__title Featured Products
         .features__row
-            .features__item.feature
-                a.feature__link(href="#") Link
-                .feature__photo
-                    img.feature__image(src="#")
-                .feature__name Man Jacket
-                .feature__price $237
-                img.feature__background(src="#")
-            .features__item.feature
-                a.feature__link(href="#") Link
-                .feature__photo
-                    img.feature__image(src="#")
-                .feature__name Man Jacket
-                .feature__price $237
-                img.feature__background(src="#")
-            .features__item.feature
-                a.feature__link(href="#") Link
-                .feature__photo
-                    img.feature__image(src="#")
-                .feature__name Man Jacket
-                .feature__price $237
-                img.feature__background(src="#")
-            .features__item.feature
-                a.feature__link(href="#") Link
-                .feature__photo
-                    img.feature__image(src="#")
-                .feature__name Man Jacket
-                .feature__price $237
-                img.feature__background(src="#")
+            - for (var x = 1; x < 5; x++) {
+                .features__item.feature
+                    a.feature__link(href="#") Link
+                    .feature__photo
+                        //img.feature__image(src="#jaket0#{x}" alt="jaket0#{x}")
+                        img.feature__image(src="#" alt="jaket0#{x}")
+                    .feature__name Man Jacket
+                    .feature__price $237
+                    img.feature__background(src="#")
+            - }
         .features__control.control
             .control__left Left
             .control__right Right
@@ -84,129 +54,30 @@ block content
         h2.products__title Recent Products
         .products__menu.nav.nav--products
             ul.nav__list
-                li.nav__item
-                    a.nav__link.nav__link--active(href="#") All
-                li.nav__item
-                    a.nav__link(href="#") Suit’s
-                li.nav__item
-                    a.nav__link(href="#") Jacket’s
-                li.nav__item
-                    a.nav__link(href="#") Pants
-                li.nav__item
-                    a.nav__link(href="#") Accesories
+                - var links = ["All", "Suit’s", "Jacket’s", "Pants", "Accesories"];
+                    each val, index in links
+                        - var className = (index == 0) ? 'nav__link nav__link--active' : 'nav__link'
+                        li.nav__item
+                            a(class="#{className}" href="#")= val
+
         .products__wrap
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="#")
-                .product__name Man Jacket
-                .product__price $237
-                img.product__background(src="#")
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
+            - for (var x = 1; x <= 8; x++) {
+                .products__item.product
+                    a.product__link(href="#") Link
+                    .product__photo
+                        img.product__image(src="#" alt="product0#{x}")
+                        //img.product__image(src="product0#{x}.jpg" alt="product0#{x}")
+                    .product__name Man Jacket
+                    .product__price $237
+                    img.product__background(src="#")
+                    .product__popup.popup
+                        a.popup__link(href="#")
+                            i.fa.fa-search(aria-hidden="true") search
+                        a.popup__link(href="#")
+                            i.fa.fa-heart-o(aria-hidden="true") heart
+                        a.popup__link(href="#")
+                            i.fa.fa-shopping-basket(aria-hidden="true") basket
+            - }
         .products__control.control.control--products
             .control__left Left
             .control__right Right
@@ -221,42 +92,20 @@ block content
     .news
         h2.news__title Latest News
         ul.news__list
-            li.news__item.item-news
-                .item-news__pict
-                    img.item-news__image(src="#")
-                h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
-                .item-news__wrap
-                    i.fa.fa-clock-o(aria-hidden="true") clock
-                    .item-news__date November 25, 2015
-                    i.fa.fa-link(aria-hidden="true") link
-                    a.item-news__link(href="#")
-                        span.item-news__tag Fashion
-                    p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
-                    a.btn(href="#")
-            li.news__item.item-news
-                .item-news__pict
-                    img.item-news__image(src="#")
-                h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
-                .item-news__wrap
-                    i.fa.fa-clock-o(aria-hidden="true") clock
-                    .item-news__date November 25, 2015
-                    i.fa.fa-link(aria-hidden="true") link
-                    a.item-news__link(href="#")
-                        span.item-news__tag Fashion
-                    p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
-                    a.btn(href="#")
-            li.news__item.item-news
-                .item-news__pict
-                    img.item-news__image(src="#")
-                h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
-                .item-news__wrap
-                    i.fa.fa-clock-o(aria-hidden="true") clock
-                    .item-news__date November 25, 2015
-                    i.fa.fa-link(aria-hidden="true") link
-                    a.item-news__link(href="#")
-                        span.item-news__tag Fashion
-                    p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
-                    a.btn(href="#")
+            - for (var x = 1; x <= 3; x++) {
+                li.news__item.item-news
+                    .item-news__pict
+                        img.item-news__image(src="#")
+                    h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
+                    .item-news__wrap
+                        i.fa.fa-clock-o(aria-hidden="true") clock
+                        .item-news__date November 25, 2015
+                        i.fa.fa-link(aria-hidden="true") link
+                        a.item-news__link(href="#")
+                            span.item-news__tag Fashion
+                        p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
+                        a.btn(href="#")
+            - }
 
     .brends
         ul#slider-brends.brends__list
@@ -281,19 +130,9 @@ block content
             .modules__row
                 h3.modules__title Why choose the cavalier shop
                 .modules__accordion.accordion
-                    h4.accordion__title We always use responsive design
-                    .accordion__photo
-                        img.accordion__image(src="#" alt="Photo01")
-                    p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    h4.accordion__title We have super UI design
-                    .accordion__photo
-                        img.accordion__image(src="#" alt="Photo02")
-                    p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    h4.accordion__title Ux optimize
-                    .accordion__photo
-                        img.accordion__image(src="#" alt="Photo03")
-                    p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    h4.accordion__title You will love this theme
-                    .accordion__photo
-                        img.accordion__image(src="#" alt="Photo04")
-                    p.accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    - var titles = ["We always use responsive design", "We have super UI design", "Ux optimize", "You will love this theme"];
+                    each val in titles
+                        h4.accordion__title= val
+                        .accordion__photo
+                            img.accordion__image(src="#" alt="Photo01")
+                        .accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
