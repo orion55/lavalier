@@ -19,17 +19,17 @@ footer.footer
 
         .quik
             h3.quik__title Quick Links
-                nav.quik__ref.ref
-                    - var links = ["Our Story", "Shipping Policy", "Terms & Conditions", "Frequently Asked Questions", "Privacy Policy", "Returns"];
-                    each val in links
-                        a.ref__link(href="#")= val
+            nav.quik__ref.ref
+                - var links = ["Our Story", "Shipping Policy", "Terms & Conditions", "Frequently Asked Questions", "Privacy Policy", "Returns"];
+                each val in links
+                    a.ref__link(href="#")= val
 
         .collections
             h3.collections__title Collections
-                nav.collections__ref.ref
-                    - var links = ["New Arrivals", "Women", "Men", "Beauty", "Home", "Kids"];
-                    each val in links
-                        a.ref__link(href="#")= val
+            nav.collections__ref.ref
+                - var links = ["New Arrivals", "Women", "Men", "Beauty", "Home", "Kids"];
+                each val in links
+                    a.ref__link(href="#")= val
 
         .feedback
             h3.feedback__title Sign up for emails
@@ -60,4 +60,4 @@ footer.footer
             img.copyright__image(src="img/logo-small.png" alt="logo-small")
             span.copyright__text.copyright__text--tm tm
             span.copyright__text All rights reserved.
-            span.copyright__link(href="http://smartythemes.com") Smartythemes.com
+            a.copyright__link(href="http://smartythemes.com") Smartythemes.com

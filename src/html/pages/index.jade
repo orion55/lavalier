@@ -12,7 +12,7 @@ block content
                     img.slider__image(src="img/slider/slider0#{n}.jpg" alt="slider0#{n}")
                     .slider__inner.promo
                         h2.promo__title Best theme for ecommerce
-                        img.promo__pic(src="img/cavalier-slider.png")
+                        img.promo__pic(src="img/cavalier-slider.png" alt="cavalier-slider")
                         .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
                         a.btn(href="#")
                         a.btn.btn--invert(href="#")
@@ -22,32 +22,36 @@ block content
         h2.features__title Featured Products
         .features__row
             - for (var x = 1; x < 5; x++) {
-                .features__item.feature
-                    a.feature__link(href="#") Link
-                    .feature__photo
-                        img.feature__image(src="img/jacket/jacket0#{x}.png" alt="jaket0#{x}")
-                    .feature__name Man Jacket
-                    .feature__price $237
+            .features__item.feature
+                a.feature__link(href="#") Link
+                .feature__photo
+                    img.feature__image(src="img/jacket/jacket0#{x}.png" alt="jaket0#{x}")
+                .feature__name Man Jacket
+                .feature__price $237
             - }
         .features__control.control
             .control__left Left
             .control__right Right
 
     .advertisments
-        .advertisments__item.advertisments__item--big.adv
-            .adv__photo.adv__photo--big
-                img.adv__image(src="img/adv/adv01.jpg" alt="adv01")
-            .adv__desc For man’s
-            .adv__subject Accesories
-            a.adv__link(href="#") check it now
-        .advertisments__item.adv.adv--left
-            .adv__desc.adv__desc--black For man’s
-            .adv__subject Accesories
-            a.adv__link(href="#") check it now
-        .advertisments__item.adv.adv--right
-            .adv__desc.adv__desc--black Spring collection
-            .adv__subject Accesories
-            a.adv__link(href="#") check it now
+        .advertisments__item.advertisments__item--big.commercial
+            .commercial__photo.commercial__photo--big
+                img.commercial__image(src="img/commercial/commercial01.jpg" alt="commercial01")
+            .commercial_desc For man’s
+            .commercial__subject Accesories
+            a.commercial__link(href="#") check it now
+        .advertisments__item.commercial.commercial--left
+            .commercial__photo
+                img.commercial__image(src="img/commercial/commercial02.jpg" alt="commercial02")
+            .commercial__desc.commercial__desc--black For man’s
+            .commercial__subject Accesories
+            a.commercial__link(href="#") check it now
+        .advertisments__item.commercial.commercial--right
+            .commercial__photo
+                img.commercial__image(src="img/commercial/commercial03.jpg" alt="commercial03")
+            .commercial__desc.commercial__desc--black Spring collection
+            .commercial__subject Accesories
+            a.commercial__link(href="#") check it now
 
     .products
         h2.products__title Recent Products
@@ -61,19 +65,19 @@ block content
 
         .products__wrap
             - for (var x = 1; x <= 8; x++) {
-                .products__item.product
-                    a.product__link(href="#") Link
-                    .product__photo
-                        img.product__image(src="img/jacket/jacket0#{x}.png" alt="product0#{x}")
-                    .product__name Man Jacket
-                    .product__price $237
-                    .product__popup.popup
-                        a.popup__link(href="#")
-                            i.fa.fa-search(aria-hidden="true") search
-                        a.popup__link(href="#")
-                            i.fa.fa-heart-o(aria-hidden="true") heart
-                        a.popup__link(href="#")
-                            i.fa.fa-shopping-basket(aria-hidden="true") basket
+            .products__item.product
+                a.product__link(href="#") Link
+                .product__photo
+                    img.product__image(src="img/jacket/jacket0#{x}.png" alt="product0#{x}")
+                .product__name Man Jacket
+                .product__price $237
+                .product__popup.popup
+                    a.popup__link(href="#")
+                        i.fa.fa-search(aria-hidden="true") search
+                    a.popup__link(href="#")
+                        i.fa.fa-heart-o(aria-hidden="true") heart
+                    a.popup__link(href="#")
+                        i.fa.fa-shopping-basket(aria-hidden="true") basket
             - }
         .products__control.control.control--products
             .control__left Left
@@ -81,27 +85,29 @@ block content
 
     .sale
         .sale__wrap
+            .sale__photo
+                img.sale__image(src="img/sale01.jpg" alt="sale01")
             h2.sale__title Made to Measure
-            img.sale__img(src="img/hr.svg" width="139" height="18")
-            img.sale_desc(src="#")
+            img.sale__img(src="img/hr.svg" width="139" height="18" alt="hr")
+            img.sale_desc(src="img/made.png" alt="made")
             a.btn(href="#")
 
     .news
         h2.news__title Latest News
         ul.news__list
             - for (var x = 1; x <= 3; x++) {
-                li.news__item.item-news
-                    .item-news__pict
-                        img.item-news__image(src="#")
-                    h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
-                    .item-news__wrap
-                        i.fa.fa-clock-o(aria-hidden="true") clock
-                        .item-news__date November 25, 2015
-                        i.fa.fa-link(aria-hidden="true") link
-                        a.item-news__link(href="#")
-                            span.item-news__tag Fashion
-                        p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
-                        a.btn(href="#")
+            li.news__item.item-news
+                .item-news__pict
+                    img.item-news__image(src="img/blog/blog0#{x}.jpg" alt="Blog0#{x}")
+                h3.item-news__title Barneys’ Windows Get an Exciting Update From Isabel Marant
+                .item-news__wrap
+                    i.fa.fa-clock-o(aria-hidden="true") clock
+                    .item-news__date November 25, 2015
+                    i.fa.fa-link(aria-hidden="true") link
+                    a.item-news__link(href="#")
+                        span.item-news__tag Fashion
+                    p.item-news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud.
+                    a.btn(href="#")
             - }
 
     .brends
@@ -128,8 +134,8 @@ block content
                 h3.modules__title Why choose the cavalier shop
                 .modules__accordion.accordion
                     - var titles = ["We always use responsive design", "We have super UI design", "Ux optimize", "You will love this theme"];
-                    each val in titles
+                    each val, index in titles
                         h4.accordion__title= val
                         .accordion__photo
-                            img.accordion__image(src="#" alt="Photo01")
+                            img.accordion__image(src="img/photo01.jpg" alt="Photo0#{index + 1}")
                         .accordion__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
