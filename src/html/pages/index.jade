@@ -9,8 +9,7 @@ block content
             - var n = 1;
             while n < 4
                 li.slider__item
-                    //img.slider__image(src="img/slider0#{n}.jpg" alt="background0#{n}")
-                    img.slider__image(src="#" alt="background0#{n}")
+                    img.slider__image(src="img/slider/slider0#{n}.jpg" alt="slider0#{n}")
                     .slider__inner.promo
                         h2.promo__title Best theme for ecommerce
                         img.promo__pic(src="img/cavalier-slider.png")
@@ -26,11 +25,9 @@ block content
                 .features__item.feature
                     a.feature__link(href="#") Link
                     .feature__photo
-                        //img.feature__image(src="#jaket0#{x}" alt="jaket0#{x}")
-                        img.feature__image(src="#" alt="jaket0#{x}")
+                        img.feature__image(src="img/jacket/jacket0#{x}.png" alt="jaket0#{x}")
                     .feature__name Man Jacket
                     .feature__price $237
-                    img.feature__background(src="#")
             - }
         .features__control.control
             .control__left Left
@@ -38,6 +35,8 @@ block content
 
     .advertisments
         .advertisments__item.advertisments__item--big.adv
+            .adv__photo.adv__photo--big
+                img.adv__image(src="img/adv/adv01.jpg" alt="adv01")
             .adv__desc For man’s
             .adv__subject Accesories
             a.adv__link(href="#") check it now
@@ -65,11 +64,9 @@ block content
                 .products__item.product
                     a.product__link(href="#") Link
                     .product__photo
-                        img.product__image(src="#" alt="product0#{x}")
-                        //img.product__image(src="product0#{x}.jpg" alt="product0#{x}")
+                        img.product__image(src="img/jacket/jacket0#{x}.png" alt="product0#{x}")
                     .product__name Man Jacket
                     .product__price $237
-                    img.product__background(src="#")
                     .product__popup.popup
                         a.popup__link(href="#")
                             i.fa.fa-search(aria-hidden="true") search
