@@ -1,1 +1,13 @@
+.slider__inner {
+  position: relative;
+}
 
+.slider__item {
+}
+
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+}

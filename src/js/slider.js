@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    $('#slider1').bxSlider(
+    $('#slider-main').bxSlider(
         {
             preloadImages: true,
             mode: 'fade',
             controls: false,
             auto: true,
-            autoStart: true,
+            autoStart: false,
             pause: 5000,
-            pager: false
+            pager: true
         }
     );
     $('#slider2').bxSlider(

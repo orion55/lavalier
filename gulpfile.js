@@ -143,7 +143,7 @@ gulp.task('fonts', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.jade.src, ['jade']);
     gulp.watch(paths.scss.src, ['sass']);
-    gulp.watch(paths.js.src, ['scripts']);
+    // gulp.watch(paths.js.src, ['scripts']);
     gulp.watch(paths.fonts.src, ['fonts']);
     gulp.watch([paths.img.src], function (event, cb) {
         gulp.start('images');
@@ -153,7 +153,7 @@ gulp.task('watch', function () {
 gulp.task('watch-no-image', function () {
     gulp.watch(paths.jade.src, ['jade']);
     gulp.watch(paths.scss.src, ['sass']);
-    gulp.watch(paths.js.src, ['scripts']);
+    // gulp.watch(paths.js.src, ['scripts']);
     gulp.watch(paths.fonts.src, ['fonts']);
 });
 

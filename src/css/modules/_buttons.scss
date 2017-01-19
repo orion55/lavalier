@@ -1,0 +1,38 @@
+.btn {
+  @include inline-block-top;
+  font-family: 'Hind', 'Arial', sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-color: white;
+  color: #606060;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  margin-right: 21px;
+  vertical-align: middle;
+  transition: background-color 0.5s ease;
+  user-select: none;
+  font-size: 12px;
+  font-weight: 300;
+  &:hover {
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), $color-main;
+    color: white;
+  }
+  &:active {
+    position: relative;
+    top: 5px;
+  }
+}
+
+.btn--invert {
+  color: white;
+  background-color: $color-main;
+  &:hover{
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), white;
+    color: $color-main;
+  }
+}
