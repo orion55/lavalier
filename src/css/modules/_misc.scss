@@ -1,0 +1,24 @@
+.header__info {
+  .fa-circle {
+    font-size: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .fa-phone {
+    font-size: 14px;
+    margin-left: 18px;
+    margin-right: 8px;
+  }
+}
+
+.cart {
+  .fa {
+    color: #5a5a5a;
+    font-size: 22px;
+    text-align: left;
+    transition: color 0.5s ease;
+    &:hover {
+      color: $color-main;
+    }
+  }
+}

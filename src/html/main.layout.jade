@@ -22,23 +22,25 @@ html(lang='en')
                 .header__wrap
                     .header__info
                         | Easy Returns
-                        i.fa.fa-circle(aria-hidden="true") circle
-                        | Free shipping on all orders over 100$  |
-                        i.fa.fa-phone(aria-hidden="true") phone
+                        i.fa.fa-circle(aria-hidden="true")
+                        | Free shipping on all orders over 100$
+                        span.header__delimiter |
+                        i.fa.fa-phone(aria-hidden="true")
                         | Call support free:
                         span.header__phone 123-45-67-890
                     .header__cart.cart
                         ul.cart__list
                             li.cart__item
                                 a.cart__link(href="#")
-                                    i.fa.fa-user-o(aria-hidden="true") user
+                                    i.fa.fa-user-o(aria-hidden="true")
                             li.cart__item
                                 a.cart__link(href="#")
-                                    i.fa.fa-heart-o(aria-hidden="true") heart
-                            li.cart__item.basket
+                                    i.fa.fa-heart-o(aria-hidden="true")
+                            li.cart__item
                                 a.cart__link(href="#")
-                                    i.fa.fa-shopping-basket(aria-hidden="true") basket
-                                .basket__count 1
+                                    i.fa.fa-shopping-basket(aria-hidden="true")
+                                .cart__count.basket
+                                    .basket__number 1
 
             .logo
                 a.logo__link(href="index.html")
