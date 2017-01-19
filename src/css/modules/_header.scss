@@ -1,6 +1,7 @@
 .header_box {
   background: url("../img/background.png") repeat;
   border-bottom: 1px solid #f8f6f6;
+  margin-bottom: 41px;
 }
 
 .header__wrap {
@@ -68,4 +69,36 @@
   font-weight: 400;
   line-height: 16px;
   text-align: center;
+}
+
+.logo {
+  margin: 0 auto 37px;
+  width: 1170px;
+}
+
+.logo__link {
+  display: block;
+  overflow: hidden;
+  width: 177px;
+  height: 43px;
+  margin: 0 auto;
+}
+
+.logo__img {
+  width: 100%;
+  height: auto;
+}
+
+.nav{
+  margin: 0 auto 38px;
+  width: 1170px;
+}
+
+.nav__link{
+  color:  #5a5a5a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
 }
