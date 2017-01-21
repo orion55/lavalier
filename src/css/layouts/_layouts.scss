@@ -198,3 +198,18 @@
 .products__wrap {
   margin-bottom: 60px;
 }
+
+.sale {
+  margin-bottom: 61px;
+  position: relative;
+}
+
+.sale__wrap {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  top: 48%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}

@@ -97,13 +97,14 @@ block content
             a.control__link(href="#") Right
 
     .sale
+        .sale__photo
+            img.sale__image(src="img/sale02.jpg" alt="sale02")
         .sale__wrap
-            .sale__photo
-                img.sale__image(src="img/sale01.jpg" alt="sale01")
             h2.sale__title Made to Measure
-            img.sale__img(src="img/hr.svg" width="139" height="18" alt="hr")
-            img.sale_desc(src="img/made.png" alt="made")
-            a.btn(href="#")
+            img.sale__pict(src="img/hr.svg" alt="hr")
+            .sale__desc
+                img.sale__made(src="img/made.png" alt="made")
+            a.btn(href="#") More info
 
     .news
         h2.news__title Latest News
