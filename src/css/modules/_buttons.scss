@@ -36,3 +36,7 @@
     color: $color-main;
   }
 }
+.btn--animate{
+  animation-name: zoomIn;
+  animation-duration: 0.75s;
+}

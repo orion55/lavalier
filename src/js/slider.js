@@ -5,12 +5,12 @@ $(document).ready(function () {
             mode: 'fade',
             controls: false,
             auto: true,
-            autoStart: false,
+            autoStart: true,
             pause: 5000,
             pager: true
         }
     );
-    $('#slider2').bxSlider(
+/*    $('#slider2').bxSlider(
         {
             preloadImages: true,
             controls: false,
@@ -30,5 +30,5 @@ $(document).ready(function () {
             pause: 5000,
             pager: true
         }
-    );
+    );*/
 });
