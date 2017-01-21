@@ -22,12 +22,12 @@ block content
         h2.features__title Featured Products
         .features__row
             - for (var x = 1; x < 5; x++) {
-            .features__item.feature
-                a.feature__link(href="#") Link
-                .feature__photo
-                    img.feature__image(src="img/jacket/jacket0#{x}.png" alt="jaket0#{x}")
-                .feature__name Man Jacket
-                .feature__price $237
+            .features__item.product.product__item
+                a.product__link(href="#") Link
+                .product__photo
+                    img.product__image(src="img/jacket/jacket0#{x}.png" alt="jaket0#{x}")
+                .product__name Man Jacket
+                .product__price $237
             - }
 
         .features__control.control.control--left
@@ -69,20 +69,26 @@ block content
                             a(class="#{className}" href="#")= val
 
         .products__wrap
-            - for (var x = 1; x <= 8; x++) {
-            .products__item.product
-                a.product__link(href="#") Link
-                .product__photo
-                    img.product__image(src="img/jacket/jacket0#{x}.png" alt="product0#{x}")
-                .product__name Man Jacket
-                .product__price $237
-                .product__popup.popup
-                    a.popup__link(href="#")
-                        i.fa.fa-search(aria-hidden="true") search
-                    a.popup__link(href="#")
-                        i.fa.fa-heart-o(aria-hidden="true") heart
-                    a.popup__link(href="#")
-                        i.fa.fa-shopping-basket(aria-hidden="true") basket
+            - var number = 1;
+            - for (var i = 1; i <= 2; i++) {
+            .products__row
+                - for (var j = 1; j <= 4; j++) {
+                .product.product__item.product--catalog
+                    a.product__link(href="#") Link
+                    .product__photo
+                        img.product__image(src="img/jacket/jacket0#{number}.png" alt="product0#{number}")
+                    .product__name Man Jacket
+                    .product__price $237
+                    .product__popup
+                        .popup
+                            a.popup__link(href="#")
+                                i.fa.fa-search(aria-hidden="true")
+                            a.popup__link(href="#")
+                                i.fa.fa-heart-o(aria-hidden="true")
+                            a.popup__link(href="#")
+                                i.fa.fa-shopping-basket(aria-hidden="true")
+                - number++;
+                - }
             - }
 
         .products__control.control.control--left

@@ -1,3 +1,6 @@
+@include add-grid(4);
+@include add-gutter(30px);
+
 .slider__inner {
   position: relative;
 }
@@ -18,37 +21,51 @@
 
 .features__row {
   @include clearfix();
-  @include add-grid(4);
-  @include add-gutter(30px);
 }
 
-.features__item {
+.product__item {
   @for $i from 1 through 4 {
-    &:nth-of-type(#{$i}) {
+    &:nth-of-type(4n + #{$i}) {
       @include grid-span(1, $i);
     }
   }
 }
 
-.features__item:nth-of-type(4) .feature__link {
+.product__item:nth-of-type(4n+4) .product__link {
   width: 100%;
 }
 
-.feature {
+.product {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
 }
 
-.feature:hover {
-  .feature__name {
+.product:hover {
+  .product__name {
     color: $color-main;
   }
-  .feature__price {
+  .product__price {
     color: $color-main;
   }
-  .feature__image {
+  .product__image {
     transform: scale(1.1);
+  }
+}
+
+.product--catalog:hover {
+  .product__name {
+    color: #606060;
+  }
+  .product__price {
+    color: #606060;
+  }
+  .product__image {
+    transform: none;
+  }
+  .product__popup {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -90,14 +107,14 @@
 
 .advertisments {
   width: 1170px;
-  margin: 0 auto 60px;
+  margin: 0 auto 45px;
   @include clearfix();
 }
 
 .advertisments__item {
   float: right;
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .advertisments__item--big {
@@ -132,6 +149,15 @@
   margin: 0 auto;
 }
 
+.products__row {
+  @include clearfix();
+  margin-bottom: 116px;
+}
+
+.products__row:last-child {
+  margin-bottom: 0;
+}
+
 .news {
   width: 1170px;
   margin: 0 auto;
@@ -140,4 +166,35 @@
 .modules {
   width: 1170px;
   margin: 0 auto;
+}
+
+.product__popup {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  width: calc(100% - 30px);
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(#f2f2f2, 0.7);
+  transition: opacity .7s ease;
+}
+
+.product__item:nth-of-type(4n+4) .product__popup {
+  width: 100%;
+}
+
+.popup {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.products__wrap {
+  margin-bottom: 60px;
 }

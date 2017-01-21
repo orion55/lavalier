@@ -25,7 +25,7 @@
   animation-duration: 0.75s;
 }
 
-.features__title {
+.features__title, .products__title {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   color: #606060;
   font-size: 25px;
@@ -37,7 +37,7 @@
   letter-spacing: 3px;
 }
 
-.feature__name, .feature__price {
+.product__name, .product__price {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   color: #606060;
   font-size: 16px;
@@ -54,11 +54,11 @@
   transition: color .7s ease;
 }
 
-.feature__price {
+.product__price {
   padding: 0 20px 20px;
 }
 
-.feature__link {
+.product__link {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,7 +69,7 @@
   overflow: hidden;
 }
 
-.feature__link:before {
+.product__link:before {
   background-color: #f2f2f2;
   content: " ";
   display: block;
@@ -113,3 +113,26 @@
   font-size: 40px;
 }
 
+.products__title {
+  margin-bottom: 21px;
+}
+
+.popup__link {
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  color: #606060;
+  font-size: 16px;
+  height: 46px;
+  width: 46px;
+  line-height: 49px;
+  margin-right: 4px;
+  right: 50%;
+  text-align: center;
+  padding: 0;
+  transition: background-color .7s ease;
+  &:hover {
+    background-color: $color-main;
+    color: white;
+  }
+}

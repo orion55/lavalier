@@ -171,3 +171,19 @@
     margin-right: 0;
   }
 }
+
+.nav__link--active {
+  color: $color-main;
+  &:after {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.nav--products .nav__link {
+  font-size: 16px;
+}
+
+.nav--products {
+  margin-bottom: 113px;
+}
