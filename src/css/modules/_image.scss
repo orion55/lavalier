@@ -33,3 +33,18 @@
   transition: transform 0.7s ease;
   cursor: pointer;
 }
+
+.advertisments__photo {
+  width: 580px;
+  height: 285px;
+  overflow: hidden;
+}
+
+.advertisments__photo--big {
+  height: 580px;
+}
+
+.advertisments__image {
+  width: 100%;
+  height: auto;
+}

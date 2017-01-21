@@ -69,7 +69,6 @@
   overflow: hidden;
 }
 
-
 .feature__link:before {
   background-color: #f2f2f2;
   content: " ";
@@ -82,3 +81,35 @@
   transform: skewY(14deg);
   transform-origin: 0 0 0;
 }
+
+.commercial_desc {
+  font-family: 'Hind', 'Arial', sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  //margin-bottom: 19px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+}
+
+.commercial__desc--black {
+  color: black;
+  text-transform: uppercase;
+  text-shadow: rgb(255, 255, 255) 0 0 5px;
+}
+
+.commercial__subject {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  //text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+}
+
+.commercial__subject--big {
+  font-size: 40px;
+}
+

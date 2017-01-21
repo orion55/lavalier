@@ -14,7 +14,7 @@ block content
                         h2.promo__title Best theme for ecommerce
                         img.promo__pic(src="img/cavalier-slider01.png" alt="cavalier-slider")
                         .promo__desc When we seek to discover the best in others, we somehow bring out the best in ourselves. A man does not have to be an angel in order to be saint. Do noble things, do not dream them all day long. You have to believe in yourself. Never bend your head, always hold it high. Look the world straight in the face.
-                        a.btn.btn--animate(href="#") Porchase
+                        a.btn.btn--animate.btn--margin-right-21(href="#") Porchase
                         a.btn.btn--invert.btn--animate(href="#") More info
                 - n++;
 
@@ -30,30 +30,33 @@ block content
                 .feature__price $237
             - }
 
-        .control.control--left
+        .features__control.control.control--left
             a.control__link(href="#") Left
-        .control.control--right
+        .features__control.control.control--right
             a.control__link(href="#") Right
 
     .advertisments
-        .advertisments__item.advertisments__item--big.commercial
-            .commercial__photo.commercial__photo--big
-                img.commercial__image(src="img/commercial/commercial01.jpg" alt="commercial01")
-            .commercial_desc For man’s
-            .commercial__subject Accesories
-            a.commercial__link(href="#") check it now
-        .advertisments__item.commercial.commercial--left
-            .commercial__photo
-                img.commercial__image(src="img/commercial/commercial02.jpg" alt="commercial02")
-            .commercial__desc.commercial__desc--black For man’s
-            .commercial__subject Accesories
-            a.commercial__link(href="#") check it now
-        .advertisments__item.commercial.commercial--right
-            .commercial__photo
-                img.commercial__image(src="img/commercial/commercial03.jpg" alt="commercial03")
-            .commercial__desc.commercial__desc--black Spring collection
-            .commercial__subject Accesories
-            a.commercial__link(href="#") check it now
+        .advertisments__item.advertisments__item--big
+            .advertisments__photo.advertisments__photo--big
+                img.advertisments__image(src="img/commercial/commercial01.jpg" alt="commercial01")
+            .commercial
+                .commercial_desc For man’s
+                .commercial__subject.commercial__subject--big Accesories
+                a.btn(href="#") check it now
+        .advertisments__item
+            .advertisments__photo
+                img.advertisments__image(src="img/commercial/commercial02.jpg" alt="commercial02")
+            .commercial.commercial--right
+                .commercial_desc New in
+                .commercial__subject Wedding suits
+                a.btn(href="#") check it now
+        .advertisments__item
+            .advertisments__photo
+                img.advertisments__image(src="img/commercial/commercial03.jpg" alt="commercial03")
+            .commercial.commercial--left
+                .commercial_desc Spring collection
+                .commercial__subject mans Jacket’s
+                a.btn(href="#") check it now
 
     .products
         h2.products__title Recent Products
@@ -81,9 +84,11 @@ block content
                     a.popup__link(href="#")
                         i.fa.fa-shopping-basket(aria-hidden="true") basket
             - }
-        .products__control.control.control--products
-            .control__left Left
-            .control__right Right
+
+        .products__control.control.control--left
+            a.control__link(href="#") Left
+        .products__control.control.control--right
+            a.control__link(href="#") Right
 
     .sale
         .sale__wrap

@@ -11,8 +11,8 @@
   border: none;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 12px 24px;
-  margin-right: 21px;
+  padding: 11px 24px;
+  //margin-right: 21px;
   vertical-align: middle;
   transition: background-color 0.5s ease;
   user-select: none;
@@ -39,4 +39,8 @@
 .btn--animate{
   animation-name: zoomIn;
   animation-duration: 0.75s;
+}
+
+.btn--margin-right-21 {
+  margin-right: 21px;
 }
