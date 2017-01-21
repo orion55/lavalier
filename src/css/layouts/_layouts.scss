@@ -2,13 +2,85 @@
   position: relative;
 }
 
-.slider__item {
-}
-
 .promo {
   position: absolute;
   top: 50%;
   left: 36%;
   transform: translate(-50%, -50%);
 
+}
+
+.features {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.features__row {
+  @include clearfix();
+  @include add-grid(4);
+  @include add-gutter(30px);
+}
+
+.features__item {
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) {
+      @include grid-span(1, $i);
+    }
+  }
+}
+
+.feature {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature:hover {
+  .feature__name {
+    color: $color-main;
+  }
+  .feature__price {
+    color: $color-main;
+  }
+  .feature__image {
+    transform: scale(1.1);
+  }
+}
+
+.control {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  width: 64px;
+  height: 64px;
+  text-indent: -9999px;
+  top: 50%;
+  transition: background-color .7s ease;
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.control--left {
+  background: url("../img/left-arrow.png") no-repeat center center #f6f6f6;
+  height: 64px;
+  margin-left: -9%;
+}
+
+.control--right {
+  background: url("../img/right-arrow.png") no-repeat center center #f6f6f6;
+  height: 64px;
+  margin-left: 103%;
+}
+
+.control__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.products {
+  position: relative;
 }

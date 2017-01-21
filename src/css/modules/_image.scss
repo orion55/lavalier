@@ -10,3 +10,26 @@
   animation-name: bounceInLeft;
   animation-duration: 0.75s;
 }
+
+.feature__photo {
+  text-align: center;
+  min-height: 240px;
+  height: 1px;
+  overflow: hidden;
+  &:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.feature__image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: middle;
+  transition: transform 0.7s ease;
+  cursor: pointer;
+}

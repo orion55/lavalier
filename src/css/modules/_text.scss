@@ -24,3 +24,61 @@
   animation-name: zoomIn;
   animation-duration: 0.75s;
 }
+
+.features__title {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #606060;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 119px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.feature__name, .feature__price {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #606060;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  letter-spacing: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 13px 22px 2px;
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+  transition: color .7s ease;
+}
+
+.feature__price {
+  padding: 0 20px 20px;
+}
+
+.feature__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: calc(100% - 30px);
+  height: 100%;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+
+.feature__link:before {
+  background-color: #f2f2f2;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  width: 200%;
+  z-index: -1;
+  transform: skewY(14deg);
+  transform-origin: 0 0 0;
+}

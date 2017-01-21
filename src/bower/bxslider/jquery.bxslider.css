@@ -12,10 +12,10 @@
 ===================================*/
 .bx-wrapper {
     position: relative;
-    margin: 0 auto 60px;
+    margin: 0 auto 55px;
     padding: 0;
     *zoom: 1;
-    -ms-touch-action: pan-y;
+    /*-ms-touch-action: pan-y;*/
     touch-action: pan-y;
 }
 
