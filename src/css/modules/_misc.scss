@@ -69,3 +69,17 @@
     margin-right: 8px;
   }
 }
+
+.info {
+  .fa-map-marker, .fa-phone, .fa-envelope-o {
+    color: #5f8eb6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    padding-right: 10px;
+  }
+  .fa-map-marker{
+    float: left;
+  }
+}

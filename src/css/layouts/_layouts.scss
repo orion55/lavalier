@@ -158,11 +158,6 @@
   margin-bottom: 0;
 }
 
-.modules {
-  width: 1170px;
-  margin: 0 auto;
-}
-
 .product__popup {
   position: absolute;
   visibility: hidden;
@@ -237,7 +232,7 @@
 
 .brends {
   background-color: #f6f6f6;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
   padding: 52px 0;
 }
 
@@ -247,4 +242,25 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.modules {
+  width: 1170px;
+  margin: 0 auto 30px;
+  @include clearfix();
+  @include add-grid(2);
+  @include add-gutter(30px);
+}
+
+.modules__row {
+  @for $i from 1 through 2 {
+    &:nth-of-type(2n + #{$i}) {
+      @include grid-span(1, $i);
+    }
+  }
+}
+
+.modules__list {
+  margin-bottom: 19px;
+  padding-left: 49px;
 }

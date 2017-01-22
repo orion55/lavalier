@@ -39,7 +39,8 @@
 .header__text--big {
   &:after {
     content: "|";
-    display: inline-block;
+    //display: inline-block;
+    @include inline-block-top();
     margin-right: 11px;
     margin-left: 17px;
   }
@@ -74,7 +75,8 @@
 }
 
 .cart__link {
-  display: inline-block;
+  //display: inline-block;
+  @include inline-block-top();
   width: 23px;
   height: 23px;
 
@@ -164,7 +166,8 @@
 }
 
 .nav__item {
-  display: inline-block;
+  //display: inline-block;
+  @include inline-block-top();
   font-size: 0;
   margin-right: 20px;
   &:last-child {
