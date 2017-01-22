@@ -25,7 +25,7 @@
   animation-duration: 0.75s;
 }
 
-.features__title, .products__title {
+.features__title, .products__title, .news__title {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   color: #606060;
   font-size: 25px;
@@ -136,13 +136,68 @@
     color: white;
   }
 }
-.sale__title{
+
+.sale__title {
   font-family: 'Playfair Display', 'Times New Roman', serif;
-  color:  #454344;
+  color: #454344;
   font-size: 62px;
   font-weight: 400;
   line-height: 75px;
   text-align: center;
   margin-bottom: 26px;
   text-transform: uppercase;
+}
+
+.news__title {
+  margin-bottom: 52px;
+}
+
+.item-news__title {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #393939;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 21px;
+}
+
+.item-news__date {
+  font-family: 'Hind', 'Arial', sans-serif;
+  color: #828282;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  margin-right: 18px;
+}
+
+.item-news__tag {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #828282;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 27px;
+  text-align: left;
+}
+
+.item-news__text {
+  font-family: 'Hind', 'Arial', sans-serif;
+  color: #828282;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.item-news__link {
+  margin-right: 8px;
+}
+
+.item-news__tag {
+  transition: color .3s ease;
+  &:hover {
+    color: $color-main;
+  }
 }

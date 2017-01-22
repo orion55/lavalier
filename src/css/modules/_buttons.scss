@@ -31,16 +31,24 @@
 .btn--invert {
   color: white;
   background-color: $color-main;
-  &:hover{
+  &:hover {
     background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), white;
     color: $color-main;
   }
 }
-.btn--animate{
+
+.btn--animate {
   animation-name: zoomIn;
   animation-duration: 0.75s;
 }
 
 .btn--margin-right-21 {
   margin-right: 21px;
+}
+
+.btn--item-news {
+  background-color: #f6f6f6;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: #606060;
+  font-weight: 400;
 }

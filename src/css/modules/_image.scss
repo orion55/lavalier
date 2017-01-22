@@ -48,23 +48,39 @@
   width: 100%;
   height: auto;
 }
-.sale__photo{
+
+.sale__photo {
   width: 100%;
   height: 1px;
   min-height: 696px;
   overflow: hidden;
 }
+
 .sale__image {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.sale__pict{
+
+.sale__pict {
   width: 139px;
   height: 18px;
   margin: 0 auto 18px;
 }
-.sale__desc{
+
+.sale__desc {
   width: 100%;
   margin: 0 auto 49px;
+}
+
+.item-news__pict {
+  width: 370px;
+  height: 247px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.item-news__image {
+  width: 100%;
+  height: auto;
 }
