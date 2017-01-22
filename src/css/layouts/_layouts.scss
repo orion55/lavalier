@@ -234,3 +234,17 @@
   border-top: 1px solid #f6f6f6;
   margin-bottom: 26px;
 }
+
+.brends {
+  background-color: #f6f6f6;
+  margin-bottom: 60px;
+  padding: 52px 0;
+}
+
+.brends__list {
+  @include clearfix();
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
