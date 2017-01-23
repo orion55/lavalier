@@ -112,7 +112,11 @@ gulp.task('sync', function () {
 gulp.task('copy-file', function () {
     gulp.src(SRC_PATH + '/bower/jquery/dist/jquery.min.js')
         .pipe(gulp.dest(DIST_PATH + '/js'));
+    gulp.src(SRC_PATH + '/bower/jquery-ui/jquery-ui.min.js')
+        .pipe(gulp.dest(DIST_PATH + '/js'));
     gulp.src(SRC_PATH + '/bower/bxslider/images/*.*')
+        .pipe(gulp.dest(DIST_PATH + '/img'));
+    gulp.src(SRC_PATH + '/bower/jquery-ui/themes/base/images/*.*')
         .pipe(gulp.dest(DIST_PATH + '/img'));
     return gulp.src(SRC_PATH + '/bower/bxslider/jquery.bxslider.js')
         .pipe(gulp.dest(DIST_PATH + '/js'));

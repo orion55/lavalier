@@ -242,7 +242,7 @@
   }
 }
 
-.accordion__title{
+.accordion__title {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   color: #606060;
   font-size: 12px;
@@ -252,12 +252,15 @@
   text-transform: uppercase;
   width: 100%;
   padding: 14px 30px;
-  background-color:  #f6f6f6;
+  background-color: #f6f6f6;
   margin-bottom: 21px;
   border-radius: 22px;
+  &:active {
+    outline: none;
+  }
 }
 
-.accordion__text{
+.accordion__text {
   font-family: 'Hind', 'Arial', sans-serif;
   color: #828282;
   font-size: 14px;
@@ -266,3 +269,23 @@
   text-align: left;
 }
 
+.modules__accordion .ui-state-active {
+  background-color: #608eb5;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.modules__accordion .ui-widget-content {
+  border: none;
+}
+
+.modules__accordion .ui-accordion-header-icon {
+  position: absolute;
+  right: 1.7em;
+  top: 13px;
+}
+
+.modules__accordion .ui-accordion-header {
+  padding: .5em .5em .5em 1.7em;
+}
